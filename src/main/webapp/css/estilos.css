@@ -1,0 +1,111 @@
+@CHARSET "UTF-8";
+
+/**
+  * Componentes
+  */
+
+div.campo {
+	margin-bottom: 10px;
+}
+
+div.campo input {
+	margin-left: 10px;
+}
+
+.mensagem.aviso {
+	background-color: yellow;
+}
+.mensagem.erro {
+	background-color: red;
+}
+
+#frmLogin {
+	float: right;
+}
+
+#areaUsuarioLogado {
+	float: right;
+}
+
+#menuConteudo {
+	height: 100%;
+}
+
+div#formCadastro input {
+	
+}
+
+div#divTabela {
+	margin-top: 10px;
+}
+
+table.dados thead tr td {
+	font-weight: bold;
+	border-bottom-width: 2px;
+	border-bottom-color: black;
+	border-width: 2px;
+}
+
+table.dados {
+	margin-top: 10px;
+	border-width: 2px;
+	border-radius: 5px;
+	
+	border-style: solid;
+    border-color: black;
+}
+
+table.dados tbody tr:nth-child(2n+1) {
+	background:cyan;
+	
+}
+
+table.dados tr:nth-child(2n+1):hover {
+	background: white;
+}
+
+table.dados tr:nth-child(2n):hover {
+	background: cyan;
+}
+
+div#formPesquisa {
+	float: right;
+}
+
+.ui-menu-150px { width: 150px; }
+
+/**
+  * Gerais
+  */
+body {
+	font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+}
+  
+.alinhamentoEsquerda {
+	float: left;
+}
+
+.alinhamentoDireira {
+	float: right;
+}
+
+.oculto {
+	visibility: hidden;
+}
+
+.centralizar {
+	text-align: center;
+}
+
+
+/*
+ jQuery UI CSS
+ */
+ 
+ #feedback { font-size: 1.4em; }
+  #selectable .ui-selecting { background: #FECA40; }
+  #selectable .ui-selected { background: #F39814; color: white; }
+  #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+  #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; }
+  
+  
