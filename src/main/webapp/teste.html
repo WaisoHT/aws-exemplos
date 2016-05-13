@@ -7,6 +7,16 @@
 
 </head>
 <body>
+	<!-- Upload file form -->
+	<form id="upload-file-form" method="get">
+		<label for="upload-file-input">Selecione um arquivo:</label>
+		<input id="upload-file-input" type="file" name="uploadfile" accept="*" />
+		<input type="button" id="btnUpload" onclick="upload();" value="salvar" title="salvar" />
+		<img alt="carregando" src="/img/loading_blue2.gif" class="loading oculto" >
+		<input type="hidden" id="inputDiretorioAtual" />
+		<br />
+		<span id="upload-file-message"></span>
+	</form>
 	<table class="dados">
 		<thead>
 			<tr>

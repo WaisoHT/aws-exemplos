@@ -2,26 +2,28 @@ package com.supprema.listobjects;
 
 public enum ArquivoTipo {
 	
-	IMAGEM_JPEG("jpeg"),
-	IMAGEM_JPG("jpg"),
-	IMAGEM_PNG("png"),
-	IMAGEM_GIF("gif"),
+	jpeg("jpeg", TipoDeMidia.Imagem),
+	jpg("jpg", TipoDeMidia.Imagem),
+	png("png", TipoDeMidia.Imagem),
+	gif("gif", TipoDeMidia.Imagem),
 	
-	MUSICA_MP3("mp3"),
-	MUSICA_WMA("wma"),
-	MUSICA_WAV("wav"),
-	MUSICA_WAVE("wave"),
+	mp3("mp3", TipoDeMidia.Musica),
+	wma("wma", TipoDeMidia.Musica),
+	wav("wav", TipoDeMidia.Musica),
+	wave("wave", TipoDeMidia.Musica),
 	
-	VIDEO_MP4("mp4"),
-	VIDEO_WMV("wmv"),
-	VIDEO_MKV("mkv"),
+	mp4("mp4", TipoDeMidia.Video),
+	wmv("wmv", TipoDeMidia.Video),
+	mkv("mkv", TipoDeMidia.Video),
 	
-	PASTA("");
+	pasta("", TipoDeMidia.Pasta);
 	
 	private String extensao;
+	private TipoDeMidia tipo;
 
-	private ArquivoTipo(String extensao) {
+	private ArquivoTipo(String extensao, TipoDeMidia tipo) {
 		this.extensao = extensao;
+		this.tipo = tipo;
 	}
 	
 	public static ArquivoTipo getPorNomeDoArquivo (String nome) {
@@ -37,4 +39,13 @@ public enum ArquivoTipo {
 	public String getExtensao() {
 		return extensao;
 	}	
+	
+	public TipoDeMidia getTipo() {
+		return tipo;
+	}
+
+	@Override
+	public String toString() {
+		return getExtensao();
+	}
 }

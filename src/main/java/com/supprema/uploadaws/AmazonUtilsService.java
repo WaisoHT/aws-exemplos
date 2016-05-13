@@ -10,7 +10,7 @@ import com.supprema.listobjects.S3Utils;
 
 @Component
 public class AmazonUtilsService {
-	
+
 	private static final String bucketName = "teste-publico";
 
 	public List<ArquivoAWS> listaArquivosPorNome(String diretorio, String nome) {
@@ -20,19 +20,20 @@ public class AmazonUtilsService {
 			s3 = new S3Utils();
 			// Lista todos os objetos do bucket
 			arquivos = s3.listObjects(bucketName, diretorio, nome);
-			//String dir = "publico";
-			
-//			s3.getFile(bucketName, key);
-			
-			/*for (ArquivoAWS arquivoAWS : arquivos) {
-				System.out.println("nome: "+arquivoAWS.getNome() + " - tamanho: "+ arquivoAWS.getTamanho());
-				System.out.println("URL de Download: "+s3.getFileURL(bucketName, dir, arquivoAWS.getNome()));
-			}*/
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
 		return arquivos;
 	}
 	
+	public void upload (String diretorio, String nome, String tipoDoConteudo, byte[] conteudo) throws IOException {
+		S3Utils s3 = new S3Utils();
+		s3.putFile(bucketName, diretorio, nome, tipoDoConteudo, conteudo);
+	}
+	
+	public void excluir (String nome) throws IOException {
+		S3Utils s3 = new S3Utils();
+		s3.deleteObject(bucketName, nome);
+	}
+
 }

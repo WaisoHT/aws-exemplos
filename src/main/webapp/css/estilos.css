@@ -68,6 +68,18 @@ table.dados tr:nth-child(2n):hover {
 	background: cyan;
 }
 
+img.loading {
+	width: 15px;
+}
+
+.oculto {
+	display: none;
+}
+
+input.btn-excluir {
+	background-image: url("img/loading_blue2.gif");
+}
+
 div#formPesquisa {
 	float: right;
 }
